@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/audio_info"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textColor="#333333"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/btnRecord"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        android:layout_marginTop="10dp"
+        android:background="#eeeeee"
+        android:gravity="center"
+        android:text="按住说话"
+        android:textColor="#333333"
+        android:textSize="15sp" />
+
+
+    <TextView
+        android:id="@+id/playRecord"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:background="#eeeeee"
+        android:gravity="center"
+        android:text="去播放"
+        android:textColor="#333333"
+        android:textSize="15sp" />
+</RelativeLayout>

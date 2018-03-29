@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="20dp">
+
+    <TextView
+        android:id="@+id/fileMode"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="#eeeeee"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="文件模式"
+        android:textColor="#333333"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/bytemode"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_below="@id/fileMode"
+        android:layout_marginTop="10dp"
+        android:background="#eeeeee"
+        android:gravity="center"
+        android:text="二进制模式"
+        android:textColor="#333333"
+        android:textSize="15sp" />
+
+</RelativeLayout>

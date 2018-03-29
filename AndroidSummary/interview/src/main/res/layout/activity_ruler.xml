@@ -1,0 +1,68 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <info.qianlong.interview.customview.customrulerview.RulerTextView
+        android:layout_width="10mm"
+        android:layout_height="10mm"
+        android:layout_gravity="center_vertical"
+        android:background="#ff0000"
+        android:text="0cm"
+        android:textColor="#ffffffff"
+        android:textSize="10pt" />
+
+    <info.qianlong.interview.customview.customrulerview.RulerTextView
+        android:layout_width="10mm"
+        android:layout_height="10mm"
+        android:layout_gravity="center_vertical"
+        android:background="#ff9900"
+        android:text="1cm"
+        android:textColor="#ffffffff"
+        android:textSize="10pt" />
+
+    <info.qianlong.interview.customview.customrulerview.RulerTextView
+        android:layout_width="10mm"
+        android:layout_height="10mm"
+        android:layout_gravity="center_vertical"
+        android:background="#cccc00"
+        android:text="2cm"
+        android:textColor="#ffffffff"
+        android:textSize="10pt" />
+
+    <info.qianlong.interview.customview.customrulerview.RulerTextView
+        android:layout_width="10mm"
+        android:layout_height="10mm"
+        android:layout_gravity="center_vertical"
+        android:background="#00ff00"
+        android:text="3cm"
+        android:textColor="#ffffffff"
+        android:textSize="10pt" />
+
+    <info.qianlong.interview.customview.customrulerview.RulerTextView
+        android:layout_width="10mm"
+        android:layout_height="10mm"
+        android:layout_gravity="center_vertical"
+        android:background="#00cccc"
+        android:text="4cm"
+        android:textColor="#ffffffff"
+        android:textSize="10pt" />
+
+    <info.qianlong.interview.customview.customrulerview.RulerTextView
+        android:layout_width="10mm"
+        android:layout_height="10mm"
+        android:layout_gravity="center_vertical"
+        android:background="#00ccff"
+        android:text="5cm"
+        android:textColor="#ffffffff"
+        android:textSize="10pt" />
+
+    <info.qianlong.interview.customview.customrulerview.RulerTextView
+        android:layout_width="10mm"
+        android:layout_height="10mm"
+        android:layout_gravity="center_vertical"
+        android:background="#00cc00"
+        android:text="6cm"
+        android:textColor="#ffffffff"
+        android:textSize="10pt" />
+</LinearLayout>

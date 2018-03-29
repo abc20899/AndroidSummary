@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Interview</string>
+
+
+    <string-array name="activities">
+        <item>cn.junechiu.interview.customview.customrulerview.RulerActivity</item>
+        <item>cn.junechiu.interview.customview.pathanim.PathAnimationActivity</item>
+        <item>cn.junechiu.interview.customview.flip3d.Flip3DViewActivity</item>
+        <item>cn.junechiu.interview.customview.viewgroup.CustomContainerActivity</item>
+        <item>cn.junechiu.interview.customview.gridpasswordview.MainActivity</item>
+    </string-array>
+
+    <string name="action_settings">Settings</string>
+    <string name="drawer_open">打开</string>
+    <string name="drawer_close">关闭</string>
+
+    <string-array name="passwordTypeArr">
+        <item>numberPassword</item>
+        <item>textPassword</item>
+        <item>textVisiblePassword</item>
+        <item>textWebPassword</item>
+    </string-array>
+</resources>
