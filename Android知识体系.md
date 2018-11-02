@@ -158,3 +158,8 @@ Bionic
 原生线程
 原生图形
 原生音频
+
+给gradle设置代理即可
+.gradle/gradle.properties文件中加入
+org.gradle.jvmargs=-DsocksProxyHost=127.0.0.1 -DsocksProxyPort=在此填入你的代理端口
+搭配ss起飞
