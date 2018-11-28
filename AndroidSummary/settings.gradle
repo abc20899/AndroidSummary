@@ -1,1 +1,1 @@
-include ':app', ':basicdemo', ':interview', ':volley', ':architecturedemo'
+include ':app', ':basicdemo', ':interview', ':volley', ':architecturedemo', ':junecore'

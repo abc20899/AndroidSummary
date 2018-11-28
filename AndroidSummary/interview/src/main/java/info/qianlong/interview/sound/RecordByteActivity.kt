@@ -7,7 +7,7 @@ import android.os.Bundle
 import android.os.Environment
 import android.os.Handler
 import android.os.Message
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.widget.Toast
 import info.qianlong.interview.R
 import kotlinx.android.synthetic.main.activity_sound_recordbyte.*

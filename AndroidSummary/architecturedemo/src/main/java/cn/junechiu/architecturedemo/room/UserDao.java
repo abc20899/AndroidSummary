@@ -21,6 +21,9 @@ public interface UserDao {
             + "last_name LIKE :last LIMIT 1")
     UserEntity findByName(String first, String last);
 
+    @Query("DELETE FROM user WHERE uid = :uid")
+    void deleteById(int uid);
+
     @Insert
     void insertAll(UserEntity... users);
 

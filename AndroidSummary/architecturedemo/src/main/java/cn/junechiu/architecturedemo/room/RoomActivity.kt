@@ -13,19 +13,23 @@ class RoomActivity : AppCompatActivity() {
         setContentView(R.layout.activity_room)
 
         addBtn.setOnClickListener {
-
+            val user = UserEntity("june", "chiu")
+            AppDataBase.getDefault(applicationContext).userDao().insertAll(user)
         }
 
         delBtn.setOnClickListener {
-
+            val user = UserEntity("june", "chiu")
+            AppDataBase.getDefault(applicationContext).userDao().delete(user)
         }
 
         updateBtn.setOnClickListener {
-
+            val user = UserEntity("june", "chiu")
+            AppDataBase.getDefault(applicationContext).userDao().update(user)
         }
 
         queryBtn.setOnClickListener {
-
+            val user = AppDataBase.getDefault(applicationContext).userDao().findByName("june", "chiu")
+            showValue.text = user.firstName + " " + user.lastName
         }
 
     }

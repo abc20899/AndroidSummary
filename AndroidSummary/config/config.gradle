@@ -6,10 +6,10 @@ ext {
     LOG_ENABLE = "true"     //log开关
 
     android = [
-            compileSdkVersion: 26,
+            compileSdkVersion: 28,
             buildToolsVersion: "26.0.2",
             minSdkVersion    : 19,
-            targetSdkVersion : 26,
+            targetSdkVersion : 28,
             versionCode      : 2,
             versionName      : "1.0.1",
             lifecycle_version: "2.0.0",
@@ -17,7 +17,7 @@ ext {
     ]
 
     version = [
-            androidSupportSdkVersion: "26.1.0",
+            androidSupportSdkVersion: "28.0.0",
             retrofitSdkVersion      : "2.3.0",
             dagger2SdkVersion       : "2.4",
             glideSdkVersion         : "4.2.0",
