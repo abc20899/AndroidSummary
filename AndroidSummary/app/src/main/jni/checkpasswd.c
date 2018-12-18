@@ -1,3 +1,4 @@
+#include <malloc.h>
 #include "cn_junechiu_interview_jni_CheckPasswd.h"
 
 //函数声明

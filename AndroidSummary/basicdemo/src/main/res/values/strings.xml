@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">BasicDemo</string>
+    <string name="title_settings_rationale">没有相应的权限，此应用程序可能无法正常工作。请点击允许使应用正常运行</string>
 </resources>

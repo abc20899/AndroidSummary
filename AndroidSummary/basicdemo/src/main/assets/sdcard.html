@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>sdcard</title>
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <script src="layui/layui.js" type="text/javascript"></script>
+    <script src="jquery-1.7.2.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+     layui.use('tree', function(){
+          var getDirData = function(){
+            var now = new Date();
+            var url = 'ls_sdcard' + '?' + now.getTime(); // 访问/video路径 获取json数据
+            $.getJSON(url, function(data) {
+                  layui.tree({
+                    elem: '#demo', //指定元素
+                    nodes: data,
+                    click: function(item){ //点击节点回调
+                      console.log(item)
+                      checkItem(item)
+                    }
+                  });
+            });
+          }
+          getDirData();
+
+          var checkItem = function(item){
+              layui.use('layer', function(){
+                  var layer = layui.layer;
+                  layer.open({
+                      title: '选择'
+                      ,type: 1
+                      ,btnAlign: 'c'
+                      ,area: ['150px', '200px']
+                      ,btn: ['下载', '删除', '打开']
+                      ,btn1: function(index, layero){
+                        //下载
+                      }
+                      ,btn2: function(index, layero){
+                        //删除
+                        //return false 开启该代码可禁止点击该按钮关闭
+                      }
+                      ,btn3: function(index){
+                        $("#path").val(item.path);
+                        //打开
+                        if(item.name.endsWith("mp4") || item.name.endsWith("m3u8")){
+                            window.open("/sdcard_player",item.name);
+                        }
+                      }
+                      ,cancel: function(){
+                        //右上角关闭回调
+                        //return false 开启该代码可禁止点击该按钮关闭
+                      }
+                  });
+              });
+          }
+     });
+
+    </script>
+</head>
+
+<body>
+<ul id="demo" style="float:left;"></ul>
+<input value="${path}" type="hidden" id="path"/>
+</video>
+</body>
+
+</html>

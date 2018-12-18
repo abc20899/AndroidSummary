@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src="jquery-1.7.2.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dplayer@latest/dist/DPlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/dplayer@latest"></script>
+
+    <script type="text/javascript">
+        var hlsjsConfig = {
+            debug: false,
+            p2pConfig: {
+                wsSignalerAddr: 'wss://free.freesignal.net',
+            }
+        };
+        var dp = function(url){
+                new DPlayer({
+                    container: document.getElementById('dplayer'),
+                    autoplay: true,
+                    video: {
+                        url: url,
+                        type: 'auto',
+                        customType: {
+                            'customHls': function (video, player) {
+                                const hls = new Hls(hlsjsConfig);
+                                hls.loadSource(video.src);
+                                hls.attachMedia(video);
+                            }
+                        }
+                    }
+                });
+        }
+
+        $(function() {
+            var now = new Date();
+            var $video = $("#videoplayer");
+            var url = 'video' + '?' + now.getTime(); // 访问/video路径 获取json数据
+            $.getJSON(url, function(data) {
+                for (var i = 0; i < data.length; i++) { //循环json写入html标签
+                    var $li = $('<li>' + data[i].name + '</li>');
+                    $li.attr("path", data[i].path);
+                    $("#filelist").append($li);  //写入html
+                    $li.click(function() { //点击li标签 访问 /files/.*
+                        //var p = "/files/" + $(this).attr("path");
+                        //$video.attr("src", "/files/" + $(this).attr("path"));
+                        //$video[0].play();
+
+                        var pathUrl = "/files" + $(this).attr("path");
+                        new DPlayer({
+                            container: document.getElementById('dplayer'),
+                            autoplay: true,
+                            video: {
+                                url: pathUrl,
+                                type: 'auto'
+                            }
+                        });
+                    });
+                }
+            });
+        });
+
+
+    </script>
+</head>
+
+<body>
+<ul id="filelist" style="float:left;"></ul>
+<div id="dplayer" style="width:350px;marginLeft:200px;"></div>
+<!--<video id="videoplayer" style="width:300px;marginLeft:100px;" controls="controls">-->
+</video>
+</body>
+
+</html>

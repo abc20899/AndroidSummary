@@ -1,0 +1,48 @@
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Document</title>
+    <meta name="viewport"
+          content="width=device-width,
+          initial-scale=1.0, minimum-scale=1.0,
+          maximum-scale=1.0, user-scalable=no"/>
+</head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dplayer@latest/dist/DPlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/cdnbye@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/dplayer@latest"></script>
+
+<body>
+<div id="dplayer"></div>
+</body>
+
+<script>
+    console.log(window.opener.document.getElementById("path").value)
+    var path = "/files" + window.opener.document.getElementById("path").value
+    var hlsjsConfig = {
+        debug: false,
+        p2pConfig: {
+            wsSignalerAddr: 'wss://free.freesignal.net',
+        }
+    };
+    var dp = function(url){
+            new DPlayer({
+                container: document.getElementById('dplayer'),
+                autoplay: true,
+                video: {
+                    url: url,
+                    type: 'auto',
+                    customType: {
+                        'customHls': function (video, player) {
+                            const hls = new Hls(hlsjsConfig);
+                            hls.loadSource(video.src);
+                            hls.attachMedia(video);
+                        }
+                    }
+                }
+            });
+    }
+
+    dp(path)
+
+</script>
+</html>

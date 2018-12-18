@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Document</title>
+</head>
+<script src="jquery.min.js"></script>
+<script src="ckplayer.js" charset="utf-8"></script>
+<script src="md5.min.js"></script>
+<script src="cktools.js"></script>
+<body>
+</body>
+
+<script>
+function md5Str(md5){
+    $('body').append('<input id="hdMd5" type="hidden" />');
+    eval(md5);
+    var md52 = $('#hdMd5').val();
+    return md52;
+}
+</script>
+</html>
